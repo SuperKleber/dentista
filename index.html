@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dentista</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style media="screen">
+      body
+      {
+        margin: 0;
+        font-family: 'Montserrat';
+
+      }
+      .bh
+      {
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background:url("images/backgroundheader.jpg");
+        background-size: 100%;
+        z-index: -1;
+      }
+      header
+      {
+        background: rgba(0,0,0,0.5);
+        text-align: center;
+        position: relative;
+        /* padding: 25px; */
+      }
+      .nombre
+      {
+        margin: 25px 25px 0 25px;
+        padding: 25px;
+      }
+      .nombre a
+      {
+        cursor: pointer;
+      }
+      .nombre img
+      {
+        width: 15%;
+        margin: 4% 0 25px 0;
+        transition: .5s;
+      }
+      .nombre img:hover
+      {
+        transform: scale(1.2);
+      }
+      .nombre h1
+      {
+        font-size: 50px;
+        margin: 0 0 20px 0;
+        font-weight: bold;
+        border: 5px solid white;
+        border-radius: 10px;
+        color: white;
+        transition: .5s;
+      }
+      .nombre h1:hover
+      {
+        background: rgb(57, 156, 178);
+      }
+      .menu
+      {
+        display: flex;
+        justify-content: space-around;
+        /* padding: 15px; */
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 2;
+      }
+      .menu ul
+      {
+        padding: 0px;
+        width:  100%;
+        background: black;
+        margin: 0;
+        border: 2px solid transparent;
+
+      }
+      .menu ul:hover
+      {
+        border: 2px solid white;
+
+      }
+      .menu a:hover
+      {
+        background: rgb(57, 156, 178);
+        color: yellow;
+
+      }
+      .menu ul:nth-of-type(2)
+      {
+        background: rgb(63, 51, 89);
+      }
+      .menu a
+      {
+        padding: 15px 0;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        transition: .2s;
+
+      }
+
+      .servicios
+      {
+        padding: 50px;
+        background: rgba(163, 22, 64,0.2);
+      }
+      .grilla
+      {
+        display: grid;
+        gap: 5px;
+        grid-template: 1fr 1fr 1fr  /1fr 1fr 1fr 1fr;
+      }
+      .grilla div
+      {
+        position: relative;
+        border: 2px solid white;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        background: rgba(0,0,0,0.5);
+        text-align: center;
+        overflow: auto;
+        cursor: pointer;
+        transition: .3s;
+        /* flex-direction: column; */
+      }
+      .grilla div:nth-of-type(3)
+      {
+        grid-column: 3 / 5;
+        grid-row:  1/ 3;
+      }
+      .grilla div:nth-of-type(4)
+      {
+        grid-column: 1/3;
+      }
+      .grilla div:nth-of-type(5)
+      {
+        grid-column: 1/2;
+      }
+      .grilla div:nth-of-type(6)
+      {
+        grid-column: 2/4;
+      }
+      .grilla img
+      {
+        display: grid;
+        width: 100%;
+      }
+      .grilla .spandissi, .spandisnone
+      {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        /* height: 50vh; */
+        padding: 25px 0;
+        color: white;
+        /* background: rgba(57, 156, 178,0.5); */
+        background: rgba(47, 79, 135,0.5);
+        top: 40%;
+        margin: 0;
+
+      }
+      .titulosservicios
+      {
+        text-align: center;
+        /* border: 10px solid white; */
+        background: black;
+        border-radius: 15px;
+        padding: 15px;
+        margin: 15px 20%;
+        color: white;
+        font-size: 45px;
+        transition: .4s;
+        border: 2px solid white;
+      }
+      .titulosservicios:hover
+      {
+        background: rgba(47, 79, 135);
+        color: gold;
+      }
+      .spandisnone
+      {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="bh"></span>
+    <header>
+      <div class="contmenu">
+        <nav class="menu">
+          <ul>
+            <a href="#servicios">Servicios</a>
+          </ul>
+          <ul>
+            <a href="#consejos">Consejos</a>
+          </ul>
+          <ul>
+            <a href="#contacto">Contacto</a>
+          </ul>
+        </nav>
+      </div>
+      <div class="nombre">
+
+        <a>
+          <img src="images/diente.png" alt="diente.png">
+          <h1>Dr. Edwin Callizaya Quispe</h1>
+        </a>
+      </div>
+    </header>
+    <section class="servicios" id="servicios">
+      <h1 class="titulosservicios">Servicios</h1>
+      <div class="grilla">
+        <div class="grillita">
+          <h1 class="spandissi">Implantes</h1>
+          <img src="images/implantes.jpg" alt="implantes.jpg">
+          <h1 class="spandisnone">Pedir Consulta</h1>
+        </div>
+        <div class="grillita">
+          <h1 class="spandissi">Estética</h1>
+          <img src="images/estetica.jpg" alt="estetica.jpg">
+          <h1 class="spandisnone">Pedir Consulta</h1>
+        </div>
+        <div class="grillita">
+          <h1 class="spandissi">Tratamientos</h1>
+          <img src="images/tratamiento.jpg" alt="tratamiento.jpg">
+          <h1 class="spandisnone">Pedir Consulta</h1>
+        </div>
+        <div class="grillita">
+          <h1 class="spandissi">Cirugías</h1>
+          <!-- Muela del juicio -->
+          <img src="images/cirugia.jpg" alt="cirugia.jpg">
+          <h1 class="spandisnone">Pedir Consulta</h1>
+        </div>
+        <div class="grillita">
+          <h1 class="spandissi">Protesis</h1>
+          <!-- total, parcial, removible, Coronas -->
+          <img src="images/protesis.jpg" alt="ortodoncia">
+          <h1 class="spandisnone">Pedir Consulta</h1>
+        </div>
+        <div class="grillita">
+          <h1 class="spandissi">Ortodoncia</h1>
+          <img src="images/ortodoncia.jpg" alt="ortodoncia">
+          <h1 class="spandisnone">Pedir Consulta</h1>
+        </div>
+        <div class="grillita">
+          <h1 class="spandissi">Endodoncia</h1>
+          <img src="images/endodoncia.jpg" alt="ortodoncia">
+          <h1 class="spandisnone">Pedir Consulta</h1>
+        </div>
+      </div>
+    </section>
+    <section class="consejos" id="consejos">
+
+    </section>
+    <footer>
+      <div class="contacto" id="contacto">
+        <h2>Edwin Callizaya</h2>
+        <a href="tel:+59177575322">77575322</a>
+        <a href="mailto:raelisjon@hotmail.com">raelisjon@hotmail.com</a>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      const grillita = document.getElementsByClassName("grillita")
+      const spanno = document.getElementsByClassName("spandisnone")
+      const spansi = document.getElementsByClassName("spandissi")
+      // const =(x)=>
+      // {
+      //   spanno[x].style.display="flex"
+      //   spansi[x].style.display="none"
+      // }
+      // for (var i = 0; i < grillita.length; i++)
+      // {
+      //   grillita[i].addEventListener("mouseover",
+      // };
+    </script>
+  </body>
+
+</html>
